@@ -47,7 +47,7 @@ class QuantopianUSFuturesCalendar(ExchangeCalendar):
         # issues caused by upgrading to pandas 18. This calendar is the most
         # severely affected since it has the most total minutes of any of the
         # zipline calendars.
-        return Timestamp("2000-01-01", tz=UTC)
+        return Timestamp("1970-01-01", tz=UTC)
 
     def execution_time_from_open(self, open_dates):
         return open_dates + Timedelta(hours=FUTURES_OPEN_TIME_OFFSET)
